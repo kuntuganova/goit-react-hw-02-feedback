@@ -10,4 +10,9 @@
     height: 25px;
     border-radius: 10px;
     background-color:rgb(195, 225, 244);
+    font-weight: bold;
+}
+
+.btn:first-letter {
+    text-transform: uppercase;
 }
