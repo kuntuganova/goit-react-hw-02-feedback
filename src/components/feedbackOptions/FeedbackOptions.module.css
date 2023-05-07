@@ -1,0 +1,13 @@
+.ul {
+    list-style: none;
+    display: flex;
+    gap: 5px; 
+    padding: 0;
+}
+
+.btn {
+    width: 90px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: azure;
+}

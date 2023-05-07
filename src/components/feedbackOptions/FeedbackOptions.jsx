@@ -1,23 +1,23 @@
-import React from 'react';
-import {ButtonsUl,Li, Button} from './FeedbackOptions.styled';
 import PropTypes from 'prop-types';
+import css from './FeedbackOptions.module.css';
 
-const Buttons = ({options, onLeaveFeedback}) => {
+export const FeedbackOptions = ({options, onLeaveFeedback}) => {
     return (
-        <ButtonsUl>
-            {options.map(option => {
-                <Li key={option}>
-                    <Button onClick={() => onLeaveFeedback(option)}>{option}</Button>
-                </Li>
-            })}{' '}
-        </ButtonsUl>
-    );
+      <ul className={css.ul}>
+      {options.map(item => (
+        <button
+          key={item}
+          className={css.btn}
+          onClick={onLeaveFeedback}
+        >
+          {item}
+        </button>
+      ))}
+      </ul>
+    );    
 };
 
-export default Buttons;
-
-Buttons.propTypes= {
+FeedbackOptions.propTypes= {
     options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     onLeaveFeedback: PropTypes.func.isRequired,
-}
-
+};
